@@ -1,0 +1,31 @@
+.body {
+  background-color: hsl(0, 6%, 87%);
+}
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.section {
+  background-color: rgb(255, 255, 255);
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid hsl(0, 6%, 87%);
+}
+.section_header {
+  border-bottom: 2px solid hsl(0, 6%, 87%);
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+.section_inputContainer {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+.section_input {
+  flex: 1;
+}
+.section_button {
+  color: white;
+  background-color: teal;
+  padding: 5px;
+}
