@@ -20,7 +20,6 @@
     render();
   };
 
-
   const toggleDoneTask = (taskIndex) => {
     tasks[taskIndex].done = !tasks[taskIndex].done;
     render();
@@ -74,9 +73,6 @@
         toggleDoneTask(taskIndex);
       });
     });
-
-
-
   };
 
   init();
