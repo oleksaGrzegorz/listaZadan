@@ -48,26 +48,26 @@
     const newTaskContent = newTaskInput.value.trim();
 
     if (newTaskContent === "") {
-        newTaskInput.focus();
-        return;
+      newTaskInput.focus();
+      return;
     }
 
     addNewTask(newTaskContent);
     newTaskInput.value = "";
     newTaskInput.focus();
-};
+  };
 
   const render = () => {
     let htmlString = "";
     for (const task of tasks) {
       htmlString += `
             <li class="list__item">
-                <button class="js-done${task.done ? " js-done--done" : ""}">${
-        task.done ? "✓" : ""
-      }</button>
-                <span class="${task.done ? " list__item--done" : ""}">${
-        task.content
-      }</span>
+                <button class="js-done${task.done ? " js-done--done" : ""}">
+                  ${task.done ? "✓" : ""}
+                </button>
+                <span class="${task.done ? " list__item--done" : ""}">
+                  ${task.content}
+                </span>
                 <button class="js-remove">🗑️</button>
             </li>
         `;
