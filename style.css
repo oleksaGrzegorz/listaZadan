@@ -32,3 +32,48 @@
   padding: 10px;
   border: none;
 }
+
+.list__item {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid hsl(0, 6%, 87%);
+}
+
+.js-done {
+  background-color: green;
+  border: none;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.js-done--done {
+  background-color: green;
+  color: white;
+}
+
+.js-remove {
+  background-color: red;
+  color: white;
+  border: none;
+  margin-left: auto;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.list__item--done {
+  text-decoration: line-through;
+}
+
+.js-tasks {
+  padding: 10px;
+  margin: 0;
+}
