@@ -1,5 +1,7 @@
 # Task List Application
 
+link: [https://oleksagrzegorz.github.io/currencyConverter/](https://oleksagrzegorz.github.io/listaZadan/)
+
 ## Overview
 This is a simple, responsive task list web application built with HTML, CSS, and JavaScript. The application allows users to add, mark as complete, and delete tasks.
 
