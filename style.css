@@ -23,6 +23,14 @@
   gap: 10px;
   margin: 10px;
 }
+
+@media (max-width: 757px) {
+  .section_form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .section_input {
   flex: 1;
   padding: 10px;
