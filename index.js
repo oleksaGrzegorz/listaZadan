@@ -46,12 +46,16 @@
     event.preventDefault();
     const newTaskInput = document.querySelector(".js-newTask");
     const newTaskContent = newTaskInput.value.trim();
+
     if (newTaskContent === "") {
-      return;
+        newTaskInput.focus();
+        return;
     }
+
     addNewTask(newTaskContent);
     newTaskInput.value = "";
-  };
+    newTaskInput.focus();
+};
 
   const render = () => {
     let htmlString = "";
