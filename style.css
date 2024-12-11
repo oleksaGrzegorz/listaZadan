@@ -52,7 +52,7 @@
   border-bottom: 2px solid hsl(0, 6%, 87%);
 }
 
-.js-done {
+.doneButton {
   background-color: green;
   border: none;
   margin-right: 10px;
@@ -65,12 +65,12 @@
   flex-shrink: 0;
 }
 
-.js-done--done {
+.doneButton--done {
   background-color: green;
   color: white;
 }
 
-.js-remove {
+.removeButton {
   background-color: red;
   color: white;
   border: none;
