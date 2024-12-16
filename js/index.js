@@ -34,14 +34,6 @@
     });
   };
 
-  const init = () => {
-    render();
-
-    const form = document.querySelector(".js-form");
-
-    form.addEventListener("submit", onFormSubmit);
-  };
-
   const onFormSubmit = (event) => {
     event.preventDefault();
     const newTaskInput = document.querySelector(".js-newTask");
@@ -75,6 +67,14 @@
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
     bindEvents();
+  };
+
+  const init = () => {
+    render();
+
+    const form = document.querySelector(".js-form");
+
+    form.addEventListener("submit", onFormSubmit);
   };
 
   init();
