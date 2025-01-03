@@ -13,11 +13,19 @@
   border: 2px solid hsl(0, 6%, 87%);
   word-break: break-word;
 }
-.section_header {
+
+.section_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 2px solid hsl(0, 6%, 87%);
+}
+
+.section_header {
   padding-bottom: 5px;
   padding-left: 10px;
 }
+
 .section_form {
   display: flex;
   gap: 10px;

@@ -1,29 +1,25 @@
 {
   let tasks = [];
 
-  
   const addNewTask = (newTaskContent) => {
-    tasks = [...tasks, { content: newTaskContent },];
+    tasks = [...tasks, { content: newTaskContent }];
     render();
   };
 
   const removeTask = (taskIndex) => {
-    tasks = [
-        ...tasks.slice(0, taskIndex),
-        ...tasks.slice(taskIndex + 1),
-    ];
+    tasks = [...tasks.slice(0, taskIndex), ...tasks.slice(taskIndex + 1)];
     render();
-};
+  };
 
   const toggleDoneTask = (taskIndex) => {
     tasks = [
       ...tasks.slice(0, taskIndex),
       {
-          ...tasks[taskIndex],
-          done: !tasks[taskIndex].done,
+        ...tasks[taskIndex],
+        done: !tasks[taskIndex].done,
       },
       ...tasks.slice(taskIndex + 1),
-  ];
+    ];
     render();
   };
 
@@ -60,15 +56,19 @@
     newTaskInput.focus();
   };
 
-  const render = () => {
+  const renderTasks = () => {
     let htmlString = "";
     for (const task of tasks) {
       htmlString += `
             <li class="list__item">
-                <button class="doneButton js-done${task.done ? " doneButton--done" : ""}">
+                <button class="doneButton js-done${
+                  task.done ? " doneButton--done" : ""
+                }">
                   ${task.done ? "✓" : ""}
                 </button>
-                <span class="list__itemContent ${task.done ? " list__item--done" : ""}">
+                <span class="list__itemContent ${
+                  task.done ? " list__item--done" : ""
+                }">
                   ${task.content}
                 </span>
                 <button class="removeButton js-remove">🗑️</button>
@@ -77,6 +77,30 @@
     }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
+  };
+
+  const renderButtons = () => {
+    const buttonsContainer = document.querySelector(".section_buttons");
+    buttonsContainer.innerHTML = `
+      <button class="button js-xxx">xxx</button>
+      <button class="button js-yyy">yyy</button>
+    `;
+  
+    const xxxButton = document.querySelector(".js-xxx");
+    const yyyButton = document.querySelector(".js-yyy");
+  
+    xxxButton.addEventListener("click", () => {
+      console.log("Przycisk xxx został kliknięty");
+    });
+  
+    yyyButton.addEventListener("click", () => {
+      console.log("Przycisk yyy został kliknięty");
+    });
+  };
+
+  const render = () => {
+    renderTasks();
+    renderButtons();
     bindEvents();
   };
 
