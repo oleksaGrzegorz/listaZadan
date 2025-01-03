@@ -80,6 +80,10 @@
   flex-shrink: 0;
 }
 
+.list__itemContent {
+  flex-grow: 1;
+}
+
 .list__item--done {
   text-decoration: line-through;
 }
