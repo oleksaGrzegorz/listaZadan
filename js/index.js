@@ -81,20 +81,27 @@
 
   const renderButtons = () => {
     const buttonsContainer = document.querySelector(".section_buttons");
+    if (tasks.length === 0) {
+      buttonsContainer.innerHTML = "";
+      return;
+    }
+
     buttonsContainer.innerHTML = `
-      <button class="button js-xxx">xxx</button>
-      <button class="button js-yyy">yyy</button>
-    `;
-  
-    const xxxButton = document.querySelector(".js-xxx");
-    const yyyButton = document.querySelector(".js-yyy");
-  
-    xxxButton.addEventListener("click", () => {
-      console.log("Przycisk xxx został kliknięty");
+      <button class="section__button--secondary js-hideDoneTasks">Ukryj ukończone</button>
+      <button class="section__button--secondary js-markAllTasksDone">Ukończ wszystkie</button>
+  `;
+
+    const hideDoneTasksButton = document.querySelector(".js-hideDoneTasks");
+    const markAllTasksDoneButton = document.querySelector(
+      ".js-markAllTasksDone"
+    );
+
+    hideDoneTasksButton.addEventListener("click", () => {
+      console.log("ukryj ukonczone zadania");
     });
-  
-    yyyButton.addEventListener("click", () => {
-      console.log("Przycisk yyy został kliknięty");
+
+    markAllTasksDoneButton.addEventListener("click", () => {
+      console.log("ukoncz wszystkie zadania");
     });
   };
 
