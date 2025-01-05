@@ -26,6 +26,11 @@
   padding-left: 10px;
 }
 
+.section_buttons {
+  color: red;
+  border: none;
+}
+
 .section_form {
   display: flex;
   gap: 10px;
@@ -48,6 +53,10 @@
   background-color: teal;
   padding: 10px;
   border: none;
+}
+
+.section_button:hover {
+  background-color: hsl(180, 100%, 40%);
 }
 
 .list__item {
@@ -99,4 +108,14 @@
 .js-tasks {
   padding: 10px;
   margin: 0;
+}
+
+.section__button--secondary {
+  color: teal;
+  border: none;
+  background-color: white;
+}
+
+.section__button--secondary:hover {
+  color: hsl(180, 100%, 40%);
 }
