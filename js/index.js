@@ -79,31 +79,40 @@
     document.querySelector(".js-tasks").innerHTML = htmlString;
   };
 
+  const areAllTasksDone = () => {
+    return tasks.every(({ done }) => done);
+};
+
   const renderButtons = () => {
     const buttonsContainer = document.querySelector(".section_buttons");
+    
     if (tasks.length === 0) {
-      buttonsContainer.innerHTML = "";
-      return;
+        buttonsContainer.innerHTML = "";
+        return;
     }
 
     buttonsContainer.innerHTML = `
-      <button class="section__button--secondary js-hideDoneTasks">Ukryj ukończone</button>
-      <button class="section__button--secondary js-markAllTasksDone">Ukończ wszystkie</button>
-  `;
+        <button class="section__button--secondary js-hideDoneTasks">Ukryj ukończone</button>
+        <button class="section__button--secondary js-markAllTasksDone"
+            ${areAllTasksDone() ? "disabled" : ""}
+        >Ukończ wszystkie</button>
+    `;
 
     const hideDoneTasksButton = document.querySelector(".js-hideDoneTasks");
-    const markAllTasksDoneButton = document.querySelector(
-      ".js-markAllTasksDone"
-    );
+    const markAllTasksDoneButton = document.querySelector(".js-markAllTasksDone");
 
     hideDoneTasksButton.addEventListener("click", () => {
-      console.log("ukryj ukonczone zadania");
+        console.log("ukryj ukonczone zadania");
     });
 
     markAllTasksDoneButton.addEventListener("click", () => {
-      console.log("ukoncz wszystkie zadania");
+        tasks = tasks.map(task => ({
+            ...task,
+            done: true,
+        }));
+        render();
     });
-  };
+};
 
   const render = () => {
     renderTasks();
