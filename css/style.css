@@ -119,3 +119,8 @@
 .section__button--secondary:hover {
   color: hsl(180, 100%, 40%);
 }
+
+.section__button--secondary:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
