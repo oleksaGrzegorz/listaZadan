@@ -64,14 +64,12 @@ const renderTasks = () => {
 
     htmlString += `
             <li class="list__item ${isHidden ? "tasksItemHidden" : ""}">
-                <button class="doneButton js-done${
-                  task.done ? " doneButton--done" : ""
-                }">
+                <button class="doneButton js-done
+                ${task.done ? " doneButton--done" : ""}">
                     ${task.done ? "✓" : ""}
                 </button>
-                <span class="list__itemContent ${
-                  task.done ? " list__item--done" : ""
-                }">
+                <span class="list__itemContent 
+                ${task.done ? " list__item--done" : ""}">
                     ${task.content}
                 </span>
                 <button class="removeButton js-remove">🗑️</button>
