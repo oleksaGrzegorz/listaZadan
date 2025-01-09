@@ -124,3 +124,7 @@
   color: #ccc;
   cursor: not-allowed;
 }
+
+.tasksItemHidden {
+  display: none;
+}

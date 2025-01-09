@@ -60,10 +60,10 @@ const onFormSubmit = (event) => {
 const renderTasks = () => {
   let htmlString = "";
   for (const task of tasks) {
-    if (task.done && hideDoneTasks) continue;
+    const isHidden = task.done && hideDoneTasks;
 
     htmlString += `
-            <li class="list__item">
+            <li class="list__item ${isHidden ? "tasksItemHidden" : ""}">
                 <button class="doneButton js-done${
                   task.done ? " doneButton--done" : ""
                 }">
