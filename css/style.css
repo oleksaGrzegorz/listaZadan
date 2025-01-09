@@ -1,62 +1,80 @@
-.body {
+body {
   background-color: hsl(0, 16%, 94%);
   font-family: "Lato", sans-serif;
 }
+
 .container {
   margin: 0 auto;
   max-width: 800px;
 }
+
 .section {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   margin-top: 10px;
   padding-bottom: 10px;
   border: 2px solid hsl(0, 6%, 87%);
   word-break: break-word;
 }
 
-.section_title {
+.section__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid hsl(0, 6%, 87%);
 }
 
-.section_header {
-  padding-bottom: 5px;
-  padding-left: 10px;
+.section__header {
+  padding: 0 0 5px 10px;
 }
 
-.section_buttons {
-  color: red;
-  border: none;
-}
-
-.section_form {
+.section__form {
   display: flex;
   gap: 10px;
   margin: 10px;
 }
 
 @media (max-width: 757px) {
-  .section_form {
-    display: flex;
+  .section__form {
     flex-direction: column;
   }
 }
 
-.section_input {
+.section__input {
   flex: 1;
   padding: 10px;
 }
-.section_button {
+
+.section__button {
   color: white;
-  background-color: teal;
+  background-color: hsl(180, 100%, 25%);
   padding: 10px;
   border: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.section_button:hover {
-  background-color: hsl(180, 100%, 40%);
+.section__button:hover {
+  background-color: hsl(180, 100%, 30%);
+  transform: scale(1.05);
+}
+
+.section__button--secondary {
+  color: hsl(180, 100%, 25%);
+  border: none;
+  background-color: white;
+}
+
+.section__button--secondary:hover {
+  color: hsl(180, 100%, 30%);
+}
+
+.section__button--secondary:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.js-tasks {
+  padding: 10px;
+  margin: 0;
 }
 
 .list__item {
@@ -67,6 +85,18 @@
   padding: 10px;
   border-radius: 5px;
   border-bottom: 2px solid hsl(0, 6%, 87%);
+}
+
+.list__itemContent {
+  flex-grow: 1;
+}
+
+.list__item--done {
+  text-decoration: line-through;
+}
+
+.tasksItemHidden {
+  display: none;
 }
 
 .doneButton {
@@ -80,11 +110,15 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  color: white;
+}
+
+.doneButton:hover {
+  background-color: hsl(120, 100%, 30%);
 }
 
 .doneButton--done {
   background-color: green;
-  color: white;
 }
 
 .removeButton {
@@ -97,34 +131,6 @@
   flex-shrink: 0;
 }
 
-.list__itemContent {
-  flex-grow: 1;
-}
-
-.list__item--done {
-  text-decoration: line-through;
-}
-
-.js-tasks {
-  padding: 10px;
-  margin: 0;
-}
-
-.section__button--secondary {
-  color: teal;
-  border: none;
-  background-color: white;
-}
-
-.section__button--secondary:hover {
-  color: hsl(180, 100%, 40%);
-}
-
-.section__button--secondary:disabled {
-  color: #ccc;
-  cursor: not-allowed;
-}
-
-.tasksItemHidden {
-  display: none;
+.removeButton:hover {
+  background-color: hsl(0, 100%, 70%);
 }

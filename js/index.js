@@ -84,7 +84,7 @@ const areAllTasksDone = () => {
 };
 
 const renderButtons = () => {
-  const buttonsContainer = document.querySelector(".section_buttons");
+  const buttonsContainer = document.querySelector(".section__buttons");
   if (tasks.length === 0) {
     buttonsContainer.innerHTML = "";
     return;
