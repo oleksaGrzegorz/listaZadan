@@ -1,0 +1,35 @@
+.doneButton {
+    background-color: green;
+    border: none;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: white;
+  }
+  
+  .doneButton:hover {
+    background-color: hsl(120, 100%, 30%);
+  }
+  
+  .doneButton--done {
+    background-color: green;
+  }
+  
+  .removeButton {
+    background-color: red;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  
+  .removeButton:hover {
+    background-color: hsl(0, 100%, 70%);
+  }

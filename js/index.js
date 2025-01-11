@@ -7,7 +7,10 @@ const addNewTask = (newTaskContent) => {
 };
 
 const removeTask = (taskIndex) => {
-  tasks = [...tasks.slice(0, taskIndex), ...tasks.slice(taskIndex + 1)];
+  tasks = [
+    ...tasks.slice(0, taskIndex),
+    ...tasks.slice(taskIndex + 1)
+  ];
   render();
 };
 
@@ -72,7 +75,7 @@ const renderTasks = () => {
                 ${task.done ? " list__item--done" : ""}">
                     ${task.content}
                 </span>
-                <button class="removeButton js-remove">🗑️</button>
+                <button class="removeButton js-remove">🗑</button>
             </li>
         `;
   }

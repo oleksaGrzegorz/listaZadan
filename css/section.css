@@ -1,0 +1,70 @@
+.section {
+    background-color: #fff;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid hsl(0, 6%, 87%);
+    word-break: break-word;
+  }
+  
+  .section__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid hsl(0, 6%, 87%);
+  }
+  
+  @media (max-width: 450px) {
+    .section__title {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .section__header {
+    padding: 0 0 5px 10px;
+  }
+  
+  .section__form {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+  }
+  
+  @media (max-width: 757px) {
+    .section__form {
+      flex-direction: column;
+    }
+  }
+  
+  .section__input {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .section__button {
+    color: white;
+    background-color: hsl(180, 100%, 25%);
+    padding: 10px;
+    border: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .section__button:hover {
+    background-color: hsl(180, 100%, 30%);
+    transform: scale(1.05);
+  }
+  
+  .section__button--secondary {
+    color: hsl(180, 100%, 25%);
+    border: none;
+    background-color: white;
+  }
+  
+  .section__button--secondary:hover {
+    color: hsl(180, 100%, 30%);
+  }
+  
+  .section__button--secondary:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
