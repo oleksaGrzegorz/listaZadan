@@ -1,9 +1,10 @@
 body {
-  background-color: hsl(0, 16%, 94%);
+  background-color: #eee;
   font-family: "Lato", sans-serif;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 900px;
+  padding: 20px;
 }

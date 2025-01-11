@@ -13,12 +13,19 @@
     border-bottom: 2px solid hsl(0, 6%, 87%);
   }
   
-  @media (max-width: 450px) {
+  @media (max-width: 757px) {
     .section__title {
       display: grid;
       grid-template-columns: 1fr;
     }
   }
+
+  @media (max-width: 757px) {
+    .section__buttons {
+      display: grid;
+    }
+  }
+
   
   .section__header {
     padding: 0 0 5px 10px;
